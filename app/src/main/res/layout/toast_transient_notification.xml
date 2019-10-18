@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/toast_frame"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_message"
+        style="@style/Text.fff.14"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="15dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

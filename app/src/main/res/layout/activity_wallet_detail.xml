@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.kms.demo.component.widget.CommonTitleBar
+        android:id="@+id/commonTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:ctb_left_drawable="@drawable/icon_navigation_back"
+        app:ctb_right_drawable="@drawable/icon_navigation_wallet" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_wallet_detail_card"
+        android:paddingLeft="25dp"
+        android:paddingTop="36dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="25dp">
+
+        <TextView
+            android:id="@+id/tv_asset_balance"
+            style="@style/Text.fff.12"
+            android:text="@string/asset_balance" />
+
+        <TextView
+            android:id="@+id/tv_balance_amount"
+            style="@style/Text.fff.24"
+            android:layout_below="@id/tv_asset_balance"
+            android:layout_marginTop="16dp"
+            tools:text="12.06554681" />
+
+        <TextView
+            android:id="@+id/tv_balance_unit"
+            style="@style/Text.fff.12"
+            android:layout_alignBaseline="@id/tv_balance_amount"
+            android:layout_toRightOf="@id/tv_balance_amount"
+            android:text="ETH" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_eth" />
+
+        <ImageView
+            android:id="@+id/iv_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/icon_copy" />
+
+        <TextView
+            android:id="@+id/tv_wallet_address"
+            style="@style/Text.fff.11"
+            android:layout_alignParentBottom="true"
+            tools:text="0xA9ed952E3040A0C925d8a718760443A4973e2117" />
+
+    </RelativeLayout>
+
+    <TextView
+        style="@style/Text.a9b0ca.16"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/transactions" />
+
+    <ListView
+        android:id="@+id/list_transactions"
+        style="@style/CommonListStyle"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@drawable/bg_wallet_list_divider"
+        android:dividerHeight="1dp"
+        tools:listitem="@layout/item_transactions" />
+
+    <LinearLayout
+        android:id="@+id/layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal">
+
+        <TextView
+            style="@style/Text.f0f2fd.12"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/icon_no_data"
+            android:drawablePadding="24dp"
+            android:text="@string/no_transaction_history" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@color/color_00000000"
+        android:divider="@drawable/bg_wallet_detail_button_divider"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <Button
+            android:id="@+id/btn_send_transaction"
+            style="@style/Text.dee1f8.12"
+            android:layout_width="139dp"
+            android:layout_height="34dp"
+            android:background="@drawable/bg_heavy_button"
+            android:enabled="false"
+            android:text="@string/send"
+            android:textColor="@color/color_heavy_button_text" />
+
+        <Button
+            android:id="@+id/btn_receive_transaction"
+            style="@style/Text.dee1f8.12"
+            android:layout_width="139dp"
+            android:layout_height="34dp"
+            android:background="@drawable/bg_heavy_button_normal"
+            android:text="@string/receive" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.kms.demo.component.widget.CommonTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        app:ctb_left_drawable="@drawable/icon_navigation_back"
+        app:ctb_title="@string/receiving" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/icon_eth2" />
+
+    <TextView
+        style="@style/Text.a9b0ca.14"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/receiving_wallet" />
+
+    <LinearLayout
+        android:id="@+id/layout_share_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_top_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/bg_qr_code_top"
+            android:paddingLeft="24dp"
+            android:paddingTop="32dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/tv_wallet_avatar"
+                style="@style/Text.fff.24"
+                android:background="@drawable/icon_avatar_medium_1"
+                tools:text="B" />
+
+            <TextView
+                android:id="@+id/tv_wallet_name"
+                style="@style/Text.f0f4fd.14"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/tv_wallet_avatar"
+                tools:text="Biganxin" />
+
+            <TextView
+                android:id="@+id/tv_wallet_address"
+                style="@style/Text.8f96a5.10"
+                android:layout_below="@id/tv_wallet_name"
+                android:layout_alignLeft="@id/tv_wallet_name"
+                android:layout_marginTop="6dp"
+                tools:text="0x6ade0d1b1fc8d1caa12def0c23a22d5c8c990068" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/icon_qr_code_divider" />
+
+        <LinearLayout
+            android:id="@+id/layout_bottom_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_qr_code_bottom"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="36dp"
+            android:paddingTop="16dp"
+            android:paddingRight="36dp"
+            android:paddingBottom="64dp">
+
+            <ImageView
+                android:id="@+id/iv_qr_code"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                tools:src="@drawable/icon_avatar_large_4" />
+
+            <TextView
+                style="@style/Text.a9b0ca.12"
+                android:layout_marginTop="16dp"
+                android:text="@string/click_to_copy_the_address" />
+
+            <Button
+                android:id="@+id/btn_share_qr_code"
+                style="@style/ButtonWithGradientStyle"
+                android:layout_marginTop="32dp"
+                android:text="@string/share_qr_code" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

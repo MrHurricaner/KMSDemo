@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="24dp"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/Text.cfd6eb.26"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/settings" />
+
+    <TextView
+        style="@style/Text.a9b0ca.16"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/system_settings" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@drawable/bg_wallet_list_divider"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/tv_key_server"
+            style="@style/Text.f0f4fd.14"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:drawableLeft="@drawable/icon_key_server"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/key_server"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_node_settings"
+            style="@style/Text.f0f4fd.14"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:drawableLeft="@drawable/icon_node_settings"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/node_settings" />
+
+        <TextView
+            android:id="@+id/tv_node_language"
+            style="@style/Text.f0f4fd.14"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:drawableLeft="@drawable/icon_language"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/language" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <com.kms.demo.component.widget.RoundedTextView
+        android:id="@+id/rtv_logout"
+        style="@style/Text.ff3030.14"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/log_out"
+        app:rtv_background_color="@color/color_00000000"
+        app:rtv_border_color="@color/color_d70606"
+        app:rtv_border_width="1dp"
+        app:rtv_corner_radius="26dp" />
+
+</LinearLayout>

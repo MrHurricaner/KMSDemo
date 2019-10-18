@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.kms.demo.component.widget.CommonTitleBar
+        android:id="@+id/commonTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:ctb_left_drawable="@drawable/icon_navigation_back"
+        app:ctb_title="@string/restore_custodian_wallet" />
+
+    <ScrollView
+        style="@style/CommonScrollView"
+        android:paddingTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Text.a9b0ca.14"
+                android:layout_marginLeft="16dp"
+                android:text="@string/wallet_name" />
+
+            <com.kms.demo.component.widget.CustomUnderlineEditText
+                android:id="@+id/et_wallet_name"
+                style="@style/EditTextWithUnderlineStyle"
+                android:textColor="@color/color_8f96a5"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:enabled="false"
+                tools:text="Sharewallet" />
+
+            <TextView
+                style="@style/Text.a9b0ca.14"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/wallet_address" />
+
+            <com.kms.demo.component.widget.CustomUnderlineEditText
+                android:id="@+id/et_wallet_address"
+                style="@style/EditTextWithUnderlineStyle"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/color_8f96a5"
+                android:layout_marginRight="16dp"
+                android:enabled="false"
+                tools:text="0x6ade0d1b1fc8d1caa12def0c23a22d5c8c990068" />
+
+            <TextView
+                style="@style/Text.a9b0ca.14"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/wallet_password" />
+
+            <com.kms.demo.component.widget.CustomUnderlineEditText
+                android:id="@+id/et_wallet_password"
+                style="@style/EditTextWithUnderlineStyle"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:hint="@string/hint_wallet_password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/tv_wallet_password_error"
+                style="@style/Text.ff2020.12"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:visibility="gone"
+                tools:text="@string/wallet_password_required"
+                tools:visibility="visible" />
+
+            <TextView
+                style="@style/Text.a9b0ca.14"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/repeat_your_password" />
+
+            <com.kms.demo.component.widget.CustomUnderlineEditText
+                android:id="@+id/et_repeat_wallet_password"
+                style="@style/EditTextWithUnderlineStyle"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:hint="@string/hint_repeat_wallet_password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/tv_repeat_wallet_password_error"
+                style="@style/Text.ff2020.12"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:visibility="gone"
+                tools:text="@string/wallet_password_required"
+                tools:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn_restore_wallet"
+                style="@style/ButtonWithGradientStyle"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="16dp"
+                android:enabled="false"
+                android:text="@string/restore_wallet" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

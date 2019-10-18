@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_welcome"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="44dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/Text.cfd6eb.24"
+        android:text="Secure Key Escrow" />
+
+    <TextView
+        android:id="@+id/tv_sub_title1"
+        style="@style/Text.a9b0ca.14"
+        android:layout_marginTop="16dp"
+        android:gravity="left"
+        android:text="•  Key fragment management, the user has full control of the wallet"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_sub_title2"
+        style="@style/Text.a9b0ca.14"
+        android:layout_marginTop="8dp"
+        android:gravity="left"
+        android:text="•  Key fragments are updated at any time, single point of exposure is risk free"
+        app:layout_constraintTop_toBottomOf="@id/tv_sub_title1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_welcome_grid"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <!--<com.opensource.svgaplayer.SVGAImageView-->
+        <!--android:id="@+id/animation_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:scaleType="fitCenter"-->
+        <!--app:antiAlias="true"-->
+        <!--app:autoPlay="false"-->
+        <!--app:source="guide_view_page1.svga" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

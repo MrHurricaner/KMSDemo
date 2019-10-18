@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.kms.demo.component.widget.CommonTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctb_left_drawable="@drawable/icon_navigation_back" />
+
+    <TextView
+        style="@style/Text.cfd6eb.26"
+        android:text="@string/account_activation" />
+
+    <TextView
+        style="@style/Text.a9adca.14"
+        android:layout_marginTop="24dp"
+        android:text="@string/phone_number" />
+
+    <LinearLayout
+        android:id="@+id/layout_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_account_activation_et"
+        android:divider="@drawable/bg_account_activation_divider"
+        android:orientation="horizontal"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/tv_country_code"
+            style="@style/Text.f1f0fd.12"
+            android:drawableRight="@drawable/icon_spread"
+            android:drawablePadding="4dp"
+            android:paddingRight="8dp"
+            tools:text="+86" />
+
+        <EditText
+            android:id="@+id/et_phone_number"
+            style="@style/Text.f1f0fd.12"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="left"
+            android:hint="@string/enter_phone_number"
+            android:inputType="phone"
+            android:paddingLeft="8dp"
+            android:textColorHint="@color/color_4a4e63"
+            android:textCursorDrawable="@drawable/bg_cursor" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_phone_number_error"
+        style="@style/Text.ff2020.12"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        tools:text="Invalid Phone Number" />
+
+    <TextView
+        style="@style/Text.a9adca.14"
+        android:layout_marginTop="24dp"
+        android:text="@string/sms_code" />
+
+    <LinearLayout
+        android:id="@+id/layout_sms_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_account_activation_et"
+        android:orientation="horizontal"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp">
+
+        <EditText
+            android:id="@+id/et_sms_code"
+            style="@style/Text.f1f0fd.12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="left"
+            android:hint="@string/enter_sms_code"
+            android:inputType="phone"
+            android:textColorHint="@color/color_4a4e63"
+            android:textCursorDrawable="@drawable/bg_cursor" />
+
+        <TextView
+            android:id="@+id/tv_get_sms_code"
+            style="@style/Text.f1f0fd.12"
+            android:text="@string/get_code" />
+
+        <TextView
+            android:id="@+id/tv_count_down"
+            style="@style/Text.f1f0fd.12"
+            android:visibility="gone"
+            tools:text="52s" />
+
+        <TextView
+            android:id="@+id/tv_resend"
+            style="@style/Text.4a4e63.12"
+            android:layout_marginLeft="4dp"
+            android:text="@string/resend"
+            android:textColor="@color/color_resend_msg_button"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_sms_code_error"
+        style="@style/Text.ff2020.12"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        tools:text="SMS Code is required" />
+
+    <Button
+        android:id="@+id/btn_activate"
+        style="@style/ButtonWithGradientStyle"
+        android:layout_marginTop="32dp"
+        android:enabled="false"
+        android:text="@string/activate" />
+
+</LinearLayout>

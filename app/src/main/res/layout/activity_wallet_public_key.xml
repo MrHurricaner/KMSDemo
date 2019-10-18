@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.kms.demo.component.widget.CommonTitleBar
+        android:id="@+id/commonTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:ctb_left_drawable="@drawable/icon_navigation_back"
+        app:ctb_title="@string/wallet_public_key" />
+
+    <LinearLayout
+        android:id="@+id/layout_share_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layout_top_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_qr_code_top"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="96dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tv_wallet_name"
+                    style="@style/Text.f0f4fd.16"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    tools:text="Biganxin" />
+
+                <TextView
+                    android:id="@+id/tv_wallet_address"
+                    style="@style/Text.8f96a5.12"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    tools:text="0x6ade0d1b1fc8d1caa12def0c23a22d5c8c990068" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_wallet_avatar"
+                style="@style/Text.fff.48"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/icon_avatar_large_1"
+                tools:text="B" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/icon_qr_code_divider" />
+
+        <LinearLayout
+            android:id="@+id/layout_bottom_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_qr_code_bottom"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="36dp"
+            android:paddingTop="56dp"
+            android:paddingRight="36dp"
+            android:paddingBottom="64dp">
+
+            <ImageView
+                android:id="@+id/iv_qr_code"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                tools:src="@drawable/icon_avatar_large_1" />
+
+            <TextView
+                style="@style/Text.a9b0ca.12"
+                android:layout_marginTop="16dp"
+                android:text="@string/copy_public_key" />
+
+            <Button
+                android:id="@+id/btn_share_wallet_public_key"
+                style="@style/ButtonWithGradientStyle"
+                android:layout_marginTop="32dp"
+                android:text="@string/share_wallet_public_key" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

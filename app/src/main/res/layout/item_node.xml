@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:divider="@drawable/bg_transaction_detail_transparent_divider"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:showDividers="middle">
+
+    <ImageView
+        android:id="@+id/iv_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_checked" />
+
+    <TextView
+        android:id="@+id/tv_node_address"
+        style="@style/Text.f0f4fd.14"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="left"
+        tools:text="https://rinkeby.infura.io/v3/c22152c1fa194298a92f8c064c95a565（Default）" />
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_delete" />
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+    }
+
+    buildTypes {
+        debug {
+
+        }
+        releaseC {
+
+        }
+        releaseX {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api rootProject.ext.dependencies.fragment
+    api rootProject.ext.dependencies.fastjson
+    api rootProject.ext.dependencies.okhttp3
+    api rootProject.ext.dependencies.retrofit2
+    api rootProject.ext.dependencies.retrofit2_adapter
+    api rootProject.ext.dependencies.retrofit2_converter
+    api rootProject.ext.dependencies.stetho
+    api rootProject.ext.dependencies.stetho_okhttp3
+    api rootProject.ext.dependencies.rxjava2_rxjava
+    api rootProject.ext.dependencies.rxjava2_rxandroid
+    api files('libs/bcprov-jdk16-146.jar')
+}

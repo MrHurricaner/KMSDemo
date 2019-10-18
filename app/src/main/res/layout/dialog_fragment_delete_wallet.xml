@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/icon_triangle" />
+
+    <TextView
+        android:id="@+id/tv_delete_wallet"
+        style="@style/Text.f9fbff.14"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:background="@color/color_cc2b2e3e"
+        android:text="@string/delete_wallet" />
+
+</LinearLayout>

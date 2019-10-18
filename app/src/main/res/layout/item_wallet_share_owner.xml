@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Text.cfd6eb.14"
+    android:drawableLeft="@drawable/icon_selected"
+    android:drawablePadding="16dp"
+    android:ellipsize="end"
+    android:lines="1"
+    tools:text="Me">
+
+</TextView>

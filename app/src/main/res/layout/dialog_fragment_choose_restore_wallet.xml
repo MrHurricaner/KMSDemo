@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_common_dialog_fragment"
+    android:clipToPadding="false"
+    android:divider="@drawable/bg_dotted_line_divider"
+    android:layerType="software"
+    android:orientation="vertical"
+    android:paddingLeft="28dp"
+    android:paddingTop="10dp"
+    android:paddingRight="28dp"
+    android:paddingBottom="14dp"
+    android:showDividers="middle">
+
+    <TextView
+        style="@style/Text.cfd6eb.16"
+        android:layout_width="match_parent"
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp"
+        android:text="@string/choose_invalid_wallet" />
+
+    <ListView
+        android:id="@+id/list_invalid_wallet"
+        style="@style/CommonListStyle"
+        android:layout_height="145dp"
+        android:choiceMode="singleChoice"
+        android:divider="@drawable/bg_dotted_line_divider"
+        android:dividerHeight="2dp"
+        tools:listitem="@layout/item_invalid_wallet" />
+
+</LinearLayout>

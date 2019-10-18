@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.kms.demo.component.widget.CommonTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctb_left_drawable="@drawable/icon_navigation_back"
+        app:ctb_title="@string/sharewallet_creating" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="8dp">
+
+            <TextView
+                style="@style/Text.cfd6eb.14"
+                android:text="Add Shared Owners(3)" />
+
+            <com.kms.demo.component.widget.ListViewForScrollView
+                android:id="@+id/list_shared_owner"
+                style="@style/CommonListStyle"
+                android:layout_marginTop="16dp"
+                android:divider="@drawable/bg_shared_owner_list_divider"
+                android:dividerHeight="16dp"
+                tools:listitem="@layout/item_shared_owner" />
+
+            <Button
+                android:id="@+id/btn_create_wallet"
+                style="@style/ButtonWithGradientStyle"
+                android:layout_marginTop="32dp"
+                android:text="@string/create" />
+
+            <TextView
+                android:id="@+id/tv_back"
+                style="@style/Text.508dff.14"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:text="@string/back" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

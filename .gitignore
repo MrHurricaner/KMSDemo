@@ -1,0 +1,26 @@
+# Gradle files
+.gradle/
+build/
+*/build
+*/.externalNativeBuild
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# IntelliJ project files
+*.iml
+.idea/
+
+# Android Studio captures folder
+captures/
+
+# Misc
+.DS_Store
+
+# svn temp directory
+tmp_commit/
+app/src/test/
+appcore/src/test/
+kms/src/test/
+zxing/src/test/
+

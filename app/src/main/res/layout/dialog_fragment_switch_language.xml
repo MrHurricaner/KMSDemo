@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_common_dialog_fragment"
+    android:clipToPadding="false"
+    android:divider="@drawable/bg_dotted_line_divider"
+    android:layerType="software"
+    android:orientation="vertical"
+    android:paddingLeft="28dp"
+    android:paddingTop="10dp"
+    android:paddingRight="28dp"
+    android:paddingBottom="14dp"
+    android:showDividers="middle">
+
+    <TextView
+        style="@style/Text.cfd6eb.16"
+        android:layout_width="match_parent"
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp"
+        android:text="@string/language" />
+
+    <TextView
+        android:id="@+id/tv_switch_chinese"
+        style="@style/Text.f0f4fd.14"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:drawableRight="@drawable/icon_selected"
+        android:gravity="left|center_vertical"
+        android:text="@string/chinese" />
+
+    <TextView
+        android:id="@+id/tv_switch_english"
+        style="@style/Text.f0f4fd.14"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:gravity="left|center_vertical"
+        android:text="@string/english" />
+
+</LinearLayout>

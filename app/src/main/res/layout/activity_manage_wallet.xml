@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.kms.demo.component.widget.CommonTitleBar
+        android:id="@+id/commonTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:ctb_left_drawable="@drawable/icon_navigation_back"
+        app:ctb_title="@string/manage_wallet" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp">
+
+        <LinearLayout
+            android:id="@+id/layout_wallet_short_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_qr_code_top"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="96dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/tv_wallet_name"
+                style="@style/Text.f0f4fd.16"
+                android:ellipsize="end"
+                android:singleLine="true"
+                tools:text="Biganxin" />
+
+            <TextView
+                android:id="@+id/tv_wallet_address"
+                style="@style/Text.8f96a5.12"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                tools:text="0x6ade0d1b1fc8d1caa12def0c23a22d5c8c990068" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_wallet_avatar"
+            style="@style/Text.fff.48"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/icon_avatar_large_1"
+            tools:text="B" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/icon_qr_code_divider" />
+
+    <LinearLayout
+        android:id="@+id/layout_wallet_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/bg_qr_code_bottom"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="36dp"
+        android:paddingTop="12dp"
+        android:paddingRight="36dp"
+        android:paddingBottom="64dp">
+
+        <TextView
+            style="@style/Text.8f96a5.12"
+            android:text="@string/wallet_name" />
+
+        <TextView
+            android:id="@+id/tv_sub_wallet_name"
+            style="@style/Text.cfd6eb.14"
+            android:layout_marginTop="8dp"
+            tools:text="biganxin" />
+
+        <TextView
+            style="@style/Text.8f96a5.12"
+            android:layout_marginTop="16dp"
+            android:text="@string/wallet_mode" />
+
+        <TextView
+            android:id="@+id/tv_wallet_mode"
+            style="@style/Text.cfd6eb.14"
+            android:layout_marginTop="8dp"
+            android:text="@string/custodian_wallet" />
+
+        <TextView
+            style="@style/Text.8f96a5.12"
+            android:layout_marginTop="16dp"
+            android:text="@string/create_time" />
+
+        <TextView
+            android:id="@+id/tv_wallet_create_time"
+            style="@style/Text.cfd6eb.14"
+            android:layout_marginTop="8dp"
+            tools:text="2018-11-06 15:35:45" />
+
+        <Button
+            android:id="@+id/btn_backup_wallet"
+            style="@style/ButtonWithGradientStyle"
+            android:layout_marginTop="32dp"
+            android:text="@string/backup_wallet"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_view_wallet_public_key"
+            style="@style/ButtonWithGradientStyle"
+            android:layout_marginTop="16dp"
+            android:text="@string/view_wallet_public_key" />
+
+    </LinearLayout>
+
+</LinearLayout>

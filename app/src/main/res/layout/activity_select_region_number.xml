@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/bg_select_region_number_transparent_divider"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:showDividers="middle">
+
+        <com.kms.demo.component.widget.ClearEditText
+            android:id="@+id/et_region_number"
+            style="@style/Text.f0f4fd.12"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_et_select_phone_region_number"
+            android:gravity="center_vertical|left"
+            android:hint="@string/hint_search_region_number"
+            android:lines="1"
+            android:textColorHint="@color/color_4a4e63"
+            android:textCursorDrawable="@drawable/bg_cursor" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            style="@style/Text.f1f0f0.12"
+            android:text="@string/cancel" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_phone_region_number"
+        style="@style/CommonListStyle"
+        android:divider="@drawable/bg_wallet_list_divider"
+        android:dividerHeight="1dp"
+        tools:listitem="@layout/item_phone_region_number" />
+
+    <LinearLayout
+        android:id="@+id/layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:paddingTop="40dp">
+
+        <TextView
+            style="@style/Text.f0f2fd.12"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/icon_no_data"
+            android:drawablePadding="24dp"
+            android:text="@string/search_no_results" />
+    </LinearLayout>
+
+</LinearLayout>

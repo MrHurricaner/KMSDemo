@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.kms.demo.component.widget.CommonTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctb_left_drawable="@drawable/icon_navigation_back"
+        app:ctb_title="@string/create_shared_wallet" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/icon_eth2" />
+
+            <TextView
+                android:id="@+id/tv_wallet_name"
+                style="@style/Text.a9b0ca.14"
+                android:layout_marginTop="24dp"
+                android:text="@string/wallet_name" />
+
+            <com.kms.demo.component.widget.CustomUnderlineEditText
+                android:id="@+id/et_wallet_name"
+                style="@style/EditTextWithUnderlineStyle"
+                android:layout_marginTop="17dp"
+                android:hint="@string/hint_wallet_name" />
+
+            <TextView
+                android:id="@+id/tv_wallet_name_error"
+                style="@style/Text.ff2020.12"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                tools:text="Activation Code is required" />
+
+            <TextView
+                android:id="@+id/tv_signed_user"
+                style="@style/Text.a9b0ca.14"
+                android:layout_marginTop="24dp"
+                android:text="@string/signed_user_number" />
+
+            <com.kms.demo.component.widget.CustomUnderlineEditText
+                android:id="@+id/et_signed_user"
+                style="@style/EditTextWithUnderlineStyle"
+                android:layout_marginTop="17dp"
+                android:enabled="false"
+                android:hint="@string/hint_set_signed_user_number"
+                android:text="3" />
+
+            <TextView
+                android:id="@+id/tv_wallet_password"
+                style="@style/Text.a9b0ca.14"
+                android:layout_marginTop="24dp"
+                android:text="@string/wallet_password" />
+
+            <com.kms.demo.component.widget.CustomUnderlineEditText
+                android:id="@+id/et_wallet_password"
+                style="@style/EditTextWithUnderlineStyle"
+                android:layout_marginTop="17dp"
+                android:hint="@string/hint_wallet_password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/tv_wallet_password_error"
+                style="@style/Text.ff2020.12"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                tools:text="Activation Code is required" />
+
+            <TextView
+                android:id="@+id/tv_repeat_wallet_password"
+                style="@style/Text.a9b0ca.14"
+                android:layout_marginTop="24dp"
+                android:text="@string/repeat_wallet_password" />
+
+            <com.kms.demo.component.widget.CustomUnderlineEditText
+                android:id="@+id/et_repeat_wallet_password"
+                style="@style/EditTextWithUnderlineStyle"
+                android:layout_marginTop="17dp"
+                android:hint="@string/hint_repeat_wallet_password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/tv_repeat_wallet_password_error"
+                style="@style/Text.ff2020.12"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                tools:text="Activation Code is required" />
+
+            <Button
+                android:id="@+id/btn_create_wallet"
+                style="@style/ButtonWithGradientStyle"
+                android:layout_marginTop="32dp"
+                android:enabled="false"
+                android:text="@string/create_wallet" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

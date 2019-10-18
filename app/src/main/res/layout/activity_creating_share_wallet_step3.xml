@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.kms.demo.component.widget.CommonTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctb_left_drawable="@drawable/icon_navigation_back"
+        app:ctb_title="@string/sharewallet_creating" />
+
+    <com.kms.demo.component.widget.ProgressingAnimationLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        style="@style/Text.cfd6eb.14"
+        android:layout_marginTop="8dp"
+        android:text="@string/creating" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_wallet_name"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/Text.8f96a5.12"
+            android:text="@string/wallet_name" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_wallet_name"
+            style="@style/Text.cfd6eb.14"
+            tools:text="@string/shared_wallet" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            style="@style/Text.8f96a5.12"
+            android:text="Wallet Shared Owner" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            style="@style/Text.8f96a5.12"
+            tools:text="【3/3】" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_shared_owner"
+        style="@style/CommonListStyle"
+        android:layout_marginTop="3dp"
+        android:divider="@drawable/bg_shared_owner_list_divider"
+        android:dividerHeight="18dp"
+        tools:listitem="@layout/item_wallet_share_owner" />
+
+
+</LinearLayout>

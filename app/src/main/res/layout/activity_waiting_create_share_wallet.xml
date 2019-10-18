@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.kms.demo.component.widget.CommonTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctb_left_drawable="@drawable/icon_navigation_back"
+        app:ctb_right_drawable="@drawable/icon_navigation_share"
+        app:ctb_title="@string/join_shared_wallet" />
+
+    <ScrollView
+        style="@style/CommonScrollView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="24dp"
+            android:paddingTop="8dp">
+
+            <com.kms.demo.component.widget.ProgressingAnimationLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/Text.cfd6eb.14"
+                android:layout_marginTop="8dp"
+                android:text="@string/jon_success" />
+
+            <TextView
+                style="@style/Text.cfd6eb.14"
+                android:layout_marginTop="8dp"
+                android:text="@string/waiting_to_create" />
+
+            <TextView
+                style="@style/Text.cfd6eb.14"
+                android:layout_marginTop="32dp"
+                android:text="@string/share_public_key_qr_code" />
+
+            <ImageView
+                android:id="@+id/iv_qr_code"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                style="@style/Text.a9b0ca.12"
+                android:layout_marginTop="8dp"
+                android:text="@string/copy_invitation_infomation" />
+
+            <TextView
+                style="@style/Text.a9b0ca.12"
+                android:layout_marginTop="24dp"
+                android:text="@string/backup_share_wallet_notice" />
+
+            <Button
+                android:id="@+id/btn_backup_wallet"
+                style="@style/ButtonWithGradientStyle"
+                android:layout_marginTop="16dp"
+                android:text="@string/backup_wallet" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

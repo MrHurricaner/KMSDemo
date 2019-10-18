@@ -1,0 +1,1 @@
+include ':app', ':appcore', ":zxing", ':kms-sdk-android'

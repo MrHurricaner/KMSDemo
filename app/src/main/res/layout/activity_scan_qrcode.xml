@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.kms.demo.component.widget.CommonTitleBar
+        android:id="@+id/commonTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:ctb_left_drawable="@drawable/icon_navigation_back"
+        app:ctb_right_text="@string/album"
+        app:ctb_right_text_size="13sp"
+        app:ctb_title="@string/scan_code" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_000000">
+
+        <SurfaceView
+            android:id="@+id/scanner_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.zxing.view.ViewfinderView
+                android:id="@+id/viewfinder_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:corner_color="@color/corner_color"
+                app:frame_color="@color/viewfinder_frame"
+                app:label_text="@string/scan_code_tips"
+                app:label_text_color="@color/color_f0f1fd"
+                app:label_text_size="12sp"
+                app:laser_color="@color/laser_color"
+                app:mask_color="@color/viewfinder_mask"
+                app:result_color="@color/result_view"
+                app:result_point_color="@color/result_point_color"
+                app:top_label_text="@string/scan_address_qr_code"
+                app:top_label_text_color="@color/color_f1f0fd"
+                app:top_text_size="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_flash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/icon_flash_off" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.kms.demo.component.widget.CommonTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctb_left_drawable="@drawable/icon_navigation_back"
+        app:ctb_title="@string/add_note" />
+
+    <TextView
+        style="@style/Text.a9b0ca.14"
+        android:layout_marginTop="24dp"
+        android:text="@string/node_address" />
+
+    <com.kms.demo.component.widget.CustomUnderlineEditText
+        android:id="@+id/et_node_address"
+        style="@style/EditTextWithUnderlineStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/enter_the_node_address" />
+
+    <TextView
+        android:id="@+id/tv_node_address_error"
+        style="@style/Text.ff2020.12"
+        android:layout_marginTop="8dp"
+        tools:text="@string/incorrect_node_address" />
+
+    <Button
+        android:id="@+id/btn_add_node"
+        style="@style/ButtonWithGradientStyle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:enabled="false"
+        android:layout_marginTop="32dp"
+        android:text="@string/add" />
+
+</LinearLayout>

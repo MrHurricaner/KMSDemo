@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.kms.demo.component.widget.CommonTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ctb_left_drawable="@drawable/icon_navigation_back"
+        app:ctb_right_drawable="@drawable/icon_navigation_scan"
+        app:ctb_title="@string/join_shared_wallet" />
+
+    <ScrollView
+        style="@style/CommonScrollView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <TextView
+                style="@style/Text.cfd6eb.26"
+                android:text="@string/join" />
+
+            <TextView
+                style="@style/Text.a9b0ca.14"
+                android:layout_marginTop="24dp"
+                android:text="@string/wallet_name" />
+
+            <com.kms.demo.component.widget.CustomUnderlineEditText
+                android:id="@+id/et_wallet_name"
+                style="@style/EditTextWithUnderlineStyle"
+                android:layout_marginTop="16dp"
+                android:enabled="false" />
+
+            <TextView
+                style="@style/Text.a9b0ca.14"
+                android:layout_marginTop="24dp"
+                android:text="@string/hint_set_signed_user_number" />
+
+            <com.kms.demo.component.widget.CustomUnderlineEditText
+                android:id="@+id/et_signed_user"
+                style="@style/EditTextWithUnderlineStyle"
+                android:layout_marginTop="16dp"
+                android:enabled="false" />
+
+            <TextView
+                style="@style/Text.a9b0ca.14"
+                android:layout_marginTop="24dp"
+                android:text="@string/initiator_public_key" />
+
+            <com.kms.demo.component.widget.CustomUnderlineEditText
+                android:id="@+id/et_public_key"
+                style="@style/EditTextWithUnderlineStyle"
+                android:layout_marginTop="16dp"
+                android:enabled="false" />
+
+            <TextView
+                style="@style/Text.a9b0ca.14"
+                android:layout_marginTop="24dp"
+                android:text="@string/wallet_password" />
+
+            <com.kms.demo.component.widget.CustomUnderlineEditText
+                android:id="@+id/et_wallet_password"
+                style="@style/EditTextWithUnderlineStyle"
+                android:layout_marginTop="16dp"
+                android:hint="@string/hint_wallet_password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/tv_wallet_password_errorr"
+                style="@style/Text.ff2020.12"
+                android:layout_marginTop="8dp"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/Text.a9b0ca.14"
+                android:layout_marginTop="24dp"
+                android:text="@string/repeat_wallet_password" />
+
+            <com.kms.demo.component.widget.CustomUnderlineEditText
+                android:id="@+id/et_repeat_wallet_password"
+                style="@style/EditTextWithUnderlineStyle"
+                android:layout_marginTop="16dp"
+                android:hint="@string/repeat_wallet_password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/tv_repeat_wallet_password_error"
+                style="@style/Text.ff2020.12"
+                android:layout_marginTop="8dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_join_shared_wallet"
+                style="@style/ButtonWithGradientStyle"
+                android:layout_marginTop="32dp"
+                android:text="@string/join" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

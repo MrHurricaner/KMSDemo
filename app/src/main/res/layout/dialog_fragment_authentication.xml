@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_common_dialog_fragment"
+    android:clipToPadding="false"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="36dp"
+    android:paddingTop="34dp"
+    android:paddingRight="36dp"
+    android:paddingBottom="38dp">
+
+    <TextView
+        style="@style/Text.cfd6eb.16"
+        android:layout_width="wrap_content"
+        android:text="@string/authentication" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_dotted_line_divider"
+        android:layerType="software" />
+
+    <TextView
+        style="@style/Text.a9b0ca.12"
+        android:layout_marginTop="16dp"
+        android:text="@string/verification_code_sender" />
+
+    <TextView
+        android:id="@+id/tv_phone_number"
+        style="@style/Text.f0f4fd.14"
+        android:layout_marginTop="8dp"
+        tools:text="+86 18925204762" />
+
+    <com.kms.demo.component.widget.VerificationCodeInput
+        android:id="@+id/verificationCodeInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:box="6"
+        app:box_bg_focus="@drawable/bg_verification_edit_focus"
+        app:box_bg_normal="@drawable/bg_verification_edit_normal"
+        app:child_h_padding="16dp"
+        app:child_height="40dp"
+        app:child_width="32dp"
+        app:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="16dp"
+        android:divider="@drawable/bg_authentication_transparent_divider"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <TextView
+            style="@style/Text.4a4e63.12"
+            android:text="@string/didn_t_receive" />
+
+        <TextView
+            android:id="@+id/tv_resend"
+            style="@style/Text.508dff.12"
+            android:text="@string/resend"
+            android:textColor="@color/color_resend_text" />
+
+        <TextView
+            android:id="@+id/tv_count_down"
+            style="@style/Text.f1f0fd.12"
+            tools:text="52s" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_cancel"
+        style="@style/ButtonWithGradientStyle"
+        android:layout_marginTop="32dp"
+        android:text="@string/cancel" />
+
+</LinearLayout>

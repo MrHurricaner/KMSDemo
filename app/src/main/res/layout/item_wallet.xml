@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
+
+    <com.kms.demo.component.widget.RoundedTextView
+        android:id="@+id/rtv_restore_wallet"
+        style="@style/Text.508dff.12"
+        android:layout_width="62dp"
+        android:layout_height="28dp"
+        android:text="@string/restore"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rtv_background_color="@color/color_00000000"
+        app:rtv_border_color="@color/color_5878ee"
+        app:rtv_border_width="0.5dp"
+        app:rtv_corner_radius="17dp"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_avatar"
+        style="@style/Text.fff.24"
+        android:background="@drawable/icon_avatar_medium_1"
+        tools:text="B" />
+
+    <TextView
+        android:id="@+id/tv_wallet_name"
+        style="@style/Text.f0f4fd.14"
+        android:layout_width="0dp"
+        android:layout_marginLeft="16dp"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:lines="1"
+        android:paddingTop="2dp"
+        app:layout_constraintLeft_toRightOf="@id/tv_avatar"
+        app:layout_constraintRight_toLeftOf="@id/rtv_restore_wallet"
+        tools:text="0x1f973B23" />
+
+    <TextView
+        android:id="@+id/tv_wallet_address"
+        style="@style/Text.8f96a5.12"
+        android:layout_width="0dp"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:lines="1"
+        app:layout_constraintLeft_toLeftOf="@id/tv_wallet_name"
+        app:layout_constraintRight_toLeftOf="@id/rtv_restore_wallet"
+        app:layout_constraintTop_toBottomOf="@id/tv_wallet_name"
+        tools:text="0x1f973B233f5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

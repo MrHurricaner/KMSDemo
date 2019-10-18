@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.kms.demo.component.widget.CommonTitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:ctb_left_drawable="@drawable/icon_navigation_back"
+        app:ctb_title="@string/backup_wallet" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="57dp">
+
+            <TextView
+                style="@style/Text.ecdb26.11"
+                android:layout_marginTop="8dp"
+                android:gravity="left"
+                android:text="@string/backup_wallet_notice" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_qr_code_top"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_wallet_avatar"
+                    style="@style/Text.fff.24"
+                    android:background="@drawable/icon_avatar_medium_1"
+                    tools:text="B" />
+
+                <TextView
+                    android:id="@+id/tv_wallet_name"
+                    style="@style/Text.f0f4fd.14"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@id/tv_wallet_avatar"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    tools:text="Biganxin" />
+
+                <TextView
+                    android:id="@+id/tv_wallet_address"
+                    style="@style/Text.8f96a5.10"
+                    android:layout_below="@id/tv_wallet_name"
+                    android:layout_alignLeft="@id/tv_wallet_name"
+                    android:layout_marginTop="6dp"
+                    android:ellipsize="middle"
+                    android:singleLine="true"
+                    tools:text="0x6ade0d1b1fc8d1caa12def0c23a22d5c8c990068" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/icon_qr_code_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_qr_code_bottom"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="24dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:background="@color/color_1b1d2a">
+
+                    <ImageView
+                        android:id="@+id/iv_hide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:src="@drawable/icon_hide"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.kms.demo.component.widget.RoundedTextView
+                        android:id="@+id/rtv_dispaly_qr_code"
+                        style="@style/Text.508dff.12"
+                        android:layout_width="144dp"
+                        android:layout_height="34dp"
+                        android:layout_marginBottom="30dp"
+                        android:text="@string/display_qr_code"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:rtv_background_color="@color/color_00000000"
+                        app:rtv_border_color="@color/color_5099fd"
+                        app:rtv_border_width="0.5dp"
+                        app:rtv_corner_radius="20dp" />
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:constraint_referenced_ids="iv_hide,rtv_dispaly_qr_code" />
+
+                    <ImageView
+                        android:id="@+id/iv_qr_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    style="@style/Text.a9b0ca.12"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/copy_public_key" />
+
+                <Button
+                    android:id="@+id/btn_backup_wallet"
+                    style="@style/ButtonWithGradientStyle"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/backup_wallet" />
+
+                <TextView
+                    style="@style/Text.8f96a5.11"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/backup_wallet_save_path" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    android:paddingLeft="17dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
+
+    <ImageView
+        android:id="@+id/iv_transation_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.9dp"
+        android:src="@drawable/icon_pending" />
+
+    <TextView
+        android:id="@+id/tv_transation_status"
+        style="@style/Text.f0f4fd.13"
+        android:layout_marginLeft="9.6dp"
+        android:layout_toRightOf="@id/iv_transation_status"
+        tools:text="Send" />
+
+    <TextView
+        android:id="@+id/tv_transaction_time"
+        style="@style/Text.8f96a5.10"
+        android:layout_alignLeft="@id/tv_transation_status"
+        android:layout_below="@id/tv_transation_status"
+        android:layout_marginTop="4dp"
+        tools:text="2018-11-06 17:13:23" />
+
+    <TextView
+        android:id="@+id/tv_transaction_amount"
+        style="@style/Text.f0f4fd.12"
+        android:layout_alignParentRight="true"
+        tools:text="-100.0015ETH" />
+
+    <TextView
+        android:id="@+id/tv_transation_status_desc"
+        style="@style/Text.508dff.10"
+        android:layout_alignRight="@id/tv_transaction_amount"
+        android:layout_below="@id/tv_transaction_amount"
+        android:layout_marginTop="4dp"
+        tools:text="MPC Executing" />
+
+</RelativeLayout>
